@@ -1,5 +1,5 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 // import DateTime from './DateTime'
 import DateTimePretty from './DateTimePretty'
 
@@ -19,6 +19,11 @@ function Video(props) {
   )
 }
 
-// Video.propTypes = {}
+Video.propTypes = {
+  props: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }),
+}
 
 export default Video

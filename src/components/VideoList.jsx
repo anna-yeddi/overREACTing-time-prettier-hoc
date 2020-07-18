@@ -1,5 +1,5 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import Video from './Video'
 
 function VideoList(props) {
@@ -8,6 +8,13 @@ function VideoList(props) {
   ))
 }
 
-// VideoList.propTypes = {}
+VideoList.propTypes = {
+  props: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ),
+}
 
 export default VideoList
