@@ -38,5 +38,12 @@ export default function App() {
     },
   ])
 
-  return <VideoList list={list} />
+  return (
+    <div>
+      <h1>Time Prettifier Video Collection</h1>
+      <div id="root-video">
+        <VideoList list={list} />
+      </div>
+    </div>
+  )
 }
